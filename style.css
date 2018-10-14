@@ -1,10 +1,4 @@
-/*.week {
-border:2px dashed red;
-border-radius:15px;
-padding:6px;
-margin:15px;
-}
-*/
+
 h1 {
     
 }
@@ -25,7 +19,7 @@ body {
 }
 
 .timeline::after {
-    content:' ';
+    content: ' ';
     position: absolute;
     width: 6px;
     background-color:white;
