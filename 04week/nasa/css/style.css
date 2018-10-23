@@ -1,0 +1,41 @@
+.img-container{
+    background-image: url(../img/nasa-background.jpg);
+    height: 450px;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+body{
+    margin: 0 auto;
+    width: 850px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+}
+.bottom{
+    background-color: gray;
+    box-sizing: border-box;
+    border: 2px lightgray;
+    height: 324px;
+    display: flex;
+    justify-content:space-evenly;
+
+}
+h3{
+    display: flex;
+    justify-content: center;
+}
+#social{
+display: flex;
+justify-content: flex-start;
+}
+#contact{
+    display: flex;
+}
+ul{
+    list-style-type: none;
+}
