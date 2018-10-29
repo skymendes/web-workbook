@@ -122,22 +122,18 @@ article li{
     ul{
         display: flex;
         flex-direction: column;
-        text-align: left;
-
-        
     }
     li{
         border-bottom: 1px solid lightgray;
-        padding: 0 20px;
         color: rgb(224, 224, 224);
+        margin: 5px;
     }
     h3{
         font-weight: bold;
         color: white;
+        margin: 10px;
     }
-    section :last-child{
-    float: right;
-    align-items: flex-end;
-
+    .fab{
+        float: right;
     }
 }
