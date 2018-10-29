@@ -67,9 +67,11 @@ article li{
 
 
 /* desktop query */
-@media(min-width:992px)
-
+@media(min-width:992px){
 footer{
     display: none;
 }
+}
+
+/* tablet query */
 
