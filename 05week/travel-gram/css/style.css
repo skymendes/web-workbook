@@ -14,7 +14,7 @@
     margin: 25px;
     padding: 10px;
 }
-h1{
+h1, h2{
     display: flex;
     justify-content: center;
 }
@@ -61,20 +61,43 @@ h1{
 img{
     margin: 5px;
 }
+.box1 img, .box2 img{
+    display: inline-block;
+    float: left;
+    height: 220px;
+    width: 220px;
+}
+.box3 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    width: 500px;
+}
+.box4 img, .box5 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 220px;
+}
+.box6 img{
+    display: inline-block;
+    float: left;
+    height: 150px;
+    width: 250px;
+}
 p{
-    padding:5px;
-    display: flex;
-    flex-wrap: wrap;
+    margin: 10px;
+    display: inline;
     box-sizing: border-box;
-    clear: both;
+    /* text-indent: -20px; didnt work to remove indentation */
 }
-.box1 p{
-    flex-wrap: wrap;
-}
-i:hover{
+
+/* i:hover{
     color: white;
     cursor: pointer;
-}
+} */
 /* Tablet Query */
 /* @media(max-width: 768px){
     box{
