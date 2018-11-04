@@ -1,3 +1,4 @@
+
 .main{
     display:    grid;
         grid-template-columns: repeat(4, 1fr);
@@ -13,20 +14,29 @@
         "box7 box8 box9 box10";
     margin: 25px;
     padding: 10px;
+    font-family: Quattrocento;
 }
 h1, h2{
     display: flex;
     justify-content: center;
+}
+h3{
+    display: flex;
+    justify-content: center;
+}
+.box1 h3, .box2 h3, .box6 h3{
+    display: flex;
+    justify-content: flex-start;
 }
 .box{
     border: 1px solid purple;
     grid-template-columns: repeat(auto-fill);
 }
 .box:nth-child(even){
-    background-color: lightblue;
+    background-color: rgb(187, 221, 233);
 }
 .box:nth-child(odd){
-    background-color: lightcoral;
+    background-color: rgb(248, 175, 175);
 }
 .box1{
     grid-area: box1;
@@ -86,6 +96,13 @@ img{
     float: left;
     height: 150px;
     width: 250px;
+}
+.box7 img, .box8 img, .box9 img, .box10 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
 }
 p{
     margin: 10px;
