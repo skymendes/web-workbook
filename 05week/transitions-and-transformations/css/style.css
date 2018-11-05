@@ -1,0 +1,80 @@
+.square1{
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+}
+.square2{
+    background-color: green;
+    height: 50px;
+    width: 50px;
+}
+.square3{
+    background-color: red;
+    height: 50px;
+    width: 50px;
+}
+.square4{
+    background-color: orange;
+    height: 50px;
+    width: 50px;
+}
+.square5{
+    background-color:yellow;
+    height: 50px;
+    width: 50px;
+}
+.square6{
+    background-color: hotpink;
+    height: 50px;
+    width: 50px;
+}
+.square7{
+    background-color: purple;
+    height: 50px;
+    width: 50px;
+}
+.square8{
+    background-color: indigo;
+    height: 50px;
+    width: 50px;
+}
+.square9{
+    background-color: cyan;
+    height: 50px;
+    width: 50px;
+}
+.square10{
+    background-color: tan;
+    height: 50px;
+    width: 50px;
+}
+.square11{
+    background-color: teal;
+    height: 50px;
+    width: 50px;
+}
+.square12{
+    background-color: rosybrown;
+    height: 50px;
+    width: 50px;
+}
+.main{
+    display: flex;
+    justify-content: center;
+}
+.trigger{
+    display: grid;
+    grid-row-gap: 20px;
+}
+.square:nth-child(even){
+    transition: all 800ms ease-out; 
+}
+.square:nth-child(odd){
+    transition: all 800ms ease-out;
+}
+.trigger:hover .square:nth-child(even){
+    transform: scale(2) translate(400px) rotateZ(1080deg);    
+}
+.trigger:hover .square:nth-child(odd){
+    transform: scale(.5) translate(-400px) rotateZ(1080deg);
+}
