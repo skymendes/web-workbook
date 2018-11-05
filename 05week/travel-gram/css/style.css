@@ -4,18 +4,18 @@ body{
     font-family: Quattrocento;
 }
 .main{
-    display:    grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-row-gap: 10px;
-        grid-column-gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 15px;
     width: calc(100% -10px);
-        height: 100%;
-        grid-auto-rows: minmax(150px, auto);
-        grid-template-areas:  
-        "box1 box1 box2 box2"
-        "box3 box3 box4 box5"
-        "box3 box3 box6 box6"
-        "box7 box8 box9 box10";
+    height: 100%;
+    grid-auto-rows: minmax(150px, auto);
+    grid-template-areas:  
+    "box1 box1 box2 box2"
+    "box3 box3 box4 box5"
+    "box3 box3 box6 box6"
+    "box7 box8 box9 box10";
     margin: 25px;
     padding: 10px;
 
@@ -124,6 +124,34 @@ a{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
+    bottom: auto;
+}
+.box1 a{
+    margin-top: 118px;
+}
+.box2 a{
+    margin-top: 100px;
+}
+.box3 a{
+    margin-top: 100px;
+}
+.box4 a{
+    margin-top: 40px;
+}
+.box5 a{
+    margin-top: 60px;
+}
+.box6 a{
+    margin-top: 45px;
+}
+.box7 a, .box10 a{
+    margin-top: 20px;
+}
+.box8 a{
+    margin-top: 35px;
+}
+.box9 a{
+    margin-top: 5px;
 }
 i{
     display: flex;
@@ -145,9 +173,79 @@ i:hover{
     cursor: pointer;
 }
 /* Tablet Query */
-/* @media(max-width: 768px){
-    box{
-    display: block;
-
+@media(max-width: 768px){
+    .main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 10px;
+        grid-column-gap: 15px;
+        width: calc(100% -10px);
+        height: 100%;
+        grid-auto-rows: minmax(150px, auto);
+        grid-template-areas:  
+        "box1 box1"
+        "box2 box3"
+        "box4 box4"
+        "box5 box6"
+        "box7 box7"
+        "box8 box9"
+        "box10 box10";
+        margin: 10px;
     }
-} */
+    body{
+        display: block;
+    }
+    h2{
+        text-align: center;
+    }
+    img{
+        padding: 5px;
+    }
+    p{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box3 img{
+        max-width: 100%;
+    }
+    .box2, .box6{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box1 a{
+        margin-left: 0 auto;
+    }
+    .box1 i, .box4 i, .box7 i, .box10 i{
+        margin-left: 90%;
+    }
+    .box2 i, .box3 i, .box6 i{
+        margin-left: 80%;
+    }
+    }
+}
+/* Moblie Query */
+@media(max-width:576px){
+    body{
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(150px, auto);
+        position: relative;
+        grid-template-areas:
+        "box1"
+        "box2"
+        "box3"
+        "box4"
+        "box5"
+        "box6"
+        "box7"
+        "box8"
+        "box9"
+        "box10";
+    }
+    
+}
