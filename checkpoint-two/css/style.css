@@ -1,1 +1,36 @@
+/* div{
+    border: 5px solid orange;
+    box-sizing: border-box;
+    padding: 5px;
+    height: 100px;
+    width: 100px;
+    shape-outside: circle;
+    border-radius: 50%;
+} */
+.navbar{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    box-sizing: border-box;
+    /* border: 1px solid lightcoral; */
+    background-color: lightcoral;
+}
+button{
+    border: none;
+    background-color: orange;
+    font-size: 20px;
+}
+.what{
+    display: grid;
+    border: 2px solid lightseagreen;
+    background-color: lightseagreen;
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    /* font-size: 30px; */
+    font-weight: 500;
 
+}
