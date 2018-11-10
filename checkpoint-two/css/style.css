@@ -1,12 +1,7 @@
-/* div{
-    border: 5px solid orange;
-    box-sizing: border-box;
-    padding: 5px;
-    height: 100px;
-    width: 100px;
-    shape-outside: circle;
-    border-radius: 50%;
-} */
+
+*{
+    font-family: quattrocento;
+}
 .navbar{
     display: flex;
     flex-direction: column;
@@ -14,14 +9,25 @@
     box-sizing: border-box;
     /* border: 1px solid lightcoral; */
     background-color: lightcoral;
+    height: 15%;
 }
 button{
     border: none;
     background-color: orange;
     font-size: 20px;
 }
-.what{
+/* aligning the divs to float around the page */
+.main{
     display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+    ". box1 box1 . ."
+    ". . . box2 box2"
+    ". box3 box3 . .";
+    margin: 40px;
+    padding: 10px;    
+}
+.what, .who, .contact{
     border: 2px solid lightseagreen;
     background-color: lightseagreen;
     box-sizing: border-box;
@@ -30,7 +36,25 @@ button{
     border-radius: 50%;
     text-align: center;
     color: white;
-    /* font-size: 30px; */
     font-weight: 500;
-
+}
+.who{
+    grid-area: box1;
+    transition: transform .5s;
+}
+.who p{
+    padding: 30px;
+}
+.what{
+    grid-area: box2;
+    transition: transform .5s;
+}
+.contact{
+    grid-area: box3;
+    transition: transform .5s;
+}
+/* enlarges bubble on hover */
+.who:hover, .what:hover, .contact:hover{
+    transform: scale(1.5);
+    background-color: darkslategray;
 }
