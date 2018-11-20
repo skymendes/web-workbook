@@ -9,6 +9,8 @@ window.onload =function(){
   newh2.innerHTML = "you have " + list[0].children.length  + " items in your shopping cart";
   document.getElementsByTagName('h1')[0].after(newh2);
 
+addingButtonToList()
+};
   // function createNewAddField(){
   let newinput = document.createElement('input');
   newinput.setAttribute("id", 'item-text');
@@ -29,5 +31,20 @@ window.onload =function(){
     textVal.innerHTML = userInput;
     document.getElementById('list').appendChild(textVal);
   }
+  function removeItemsExistingList(appendElement){
+    let removebutton = document.createElement('button');
+    removebutton.setAttribute("id", 'remove button');
+    removebutton.innerHTML = "remove item";
+    appendElement.appendChild(removebutton);
+  }
+    
 
-};
+    function addingButtonToList(){
+      let list = document.getElementById('list');
+      for(let i=0; i < list.children.length; i++){
+        removeItemsExistingList(list.children[i]);
+      }
+    }
+  
+    
+
