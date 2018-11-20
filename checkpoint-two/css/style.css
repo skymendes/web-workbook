@@ -1,4 +1,3 @@
-
 *{
     font-family: quattrocento;
 }
@@ -105,15 +104,16 @@ h4{
 footer{
     display: flex;
     justify-content: baseline;
-    flex-direction: column;
     float: right;
+    flex-direction: row;
     
 }
 
 /* Tablet Query */
 @media (max-width: 768px){
     .parallax{ 
-        max-width: 100%;    
+        max-width: 100%; 
+        background-size: cover;   
     }
     .parallax h1{
         font-size: 40px;
@@ -140,5 +140,43 @@ footer{
     footer{
         display: flex;
         flex-direction: row;
+    }
+}
+
+/* Phone Query */
+@media (max-width:576px){
+    .parallax{
+        background-size: cover;
+    }
+    .parallax h1{
+        font-size: 30px;
+    }
+    .who, .what, .goal{
+        border-radius: 5px;
+        height: 200px;
+        background-color: lightblue;
+        border: 1px;
+        color: black;
+        font-weight: 600;
+    }
+    footer{
+        width: 100%;
+        height: 60px;
+        background-color: darkslategray;
+        display: flex;
+        float: right;
+    }
+    .who:hover, .what:hover, .goal:hover{
+        background-color:lightblue;
+    }
+    .contact{
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+    }
+    .fab, .fas{
+        font-size: 30px;
+        display: flex;
+        justify-content: space-between;
     }
 }
