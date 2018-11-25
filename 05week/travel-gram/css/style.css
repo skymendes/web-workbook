@@ -1,3 +1,8 @@
+
+body{
+    background-color: rgb(243, 242, 242);
+    font-family: Quattrocento;
+}
 .main{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -7,52 +12,237 @@
     height: 100%;
     grid-auto-rows: minmax(150px, auto);
     grid-template-areas:  
-        "box1 box1 box2 box2"
-        "box3 box3 box4 box5"
-        "box3 box3 box6 box6"
-        "box7 box8 box9 box10";
+    "box1 box1 box2 box2"
+    "box3 box3 box4 box5"
+    "box3 box3 box6 box6"
+    "box7 box8 box9 box10";
     margin: 25px;
     padding: 10px;
+
+}
+h1, h2{
+    display: flex;
+    justify-content: center;
+}
+h3{
+    display: flex;
+    justify-content: center;
+}
+.box1 h3, .box2 h3, .box6 h3{
+    display: flex;
+    justify-content: flex-start;
 }
 .box{
-    border: 1px solid purple;
+    border: 1px dotted rgb(91, 99, 104);
+    border-radius: 3px;
+    grid-template-columns: repeat(auto-fill);
+    position: relative;
 }
 .box:nth-child(even){
-    background-color: lightblue;
+    background-color: rgb(207, 240, 252);
 }
 .box:nth-child(odd){
-    background-color: lightcoral;
+    background-color: rgb(253, 201, 201);
 }
 .box1{
-grid-area: box1;
-height: 225px;
+    grid-area: box1;
 }
 .box2{
-grid-area: box2;
+    grid-area: box2;
 }
 .box3{
-grid-area: box3;
+    grid-area: box3;
 }
 .box4{
-grid-area: box4;
-height: 250px;
+    grid-area: box4;
 }
 .box5{
-grid-area: box5;
+    grid-area: box5;
 }
 .box6{
-grid-area: box6;
+    grid-area: box6;
 }
 .box7{
-grid-area: box7;
-height: 300px;
+    grid-area: box7;
 }
 .box8{
-grid-area: box8;
+    grid-area: box8;
 }
 .box9{
-grid-area: box9;
+    grid-area: box9;
 }
 .box10{
-grid-area: box10;
+    grid-area: box10;
+}
+img{
+    margin: 5px;
+}
+.box1 img, .box2 img{
+    display: inline-block;
+    float: left;
+    height: 220px;
+    width: 220px;
+}
+.box3 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    width: 500px;
+}
+.box4 img, .box5 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 220px;
+}
+.box6 img{
+    display: inline-block;
+    float: left;
+    height: 150px;
+    width: 250px;
+}
+.box7 img, .box8 img, .box9 img, .box10 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
+}
+p{
+    margin: 20px;
+    display: inline;
+    box-sizing: border-box;
+    padding: 10px;
+    /* text-indent: -20px; didnt work to remove indentation */
+}
+a{
+    display: flex; 
+    /* margin-top: 10px; */
+    color: darkslategray;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    bottom: auto;
+}
+.box1 a{
+    margin-top: 118px;
+}
+.box2 a{
+    margin-top: 100px;
+}
+.box3 a{
+    margin-top: 100px;
+}
+.box4 a{
+    margin-top: 40px;
+}
+.box5 a{
+    margin-top: 60px;
+}
+.box6 a{
+    margin-top: 45px;
+}
+.box7 a, .box10 a{
+    margin-top: 20px;
+}
+.box8 a{
+    margin-top: 35px;
+}
+.box9 a{
+    margin-top: 5px;
+}
+i{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin-left: 82%;
+}
+.box1 i, .box2 i{
+    margin-left: 62%;
+}
+.box3 i{
+    margin-left:91%; 
+}
+.box6 i{
+    margin-left: 58%;
+}
+i:hover{
+    color: white;
+    cursor: pointer;
+}
+/* Tablet Query */
+@media(max-width: 768px){
+    .main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 10px;
+        grid-column-gap: 15px;
+        width: calc(100% -10px);
+        height: 100%;
+        /* grid-auto-rows: minmax(150px, auto); */
+        grid-template-areas:  
+        "box1 box1"
+        "box2 box3"
+        "box4 box4"
+        "box5 box6"
+        "box7 box7"
+        "box8 box9"
+        "box10 box10";
+        margin: 10px;
+    }
+    h2{
+        text-align: center;
+    }
+    img{
+        padding: 5px;
+    }
+    p{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box3 img{
+        max-width: 100%;
+    }
+    .box2, .box6{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box1 a{
+        margin-left: 0 auto;
+    }
+    .box1 i, .box4 i, .box7 i, .box10 i{
+        margin-left: 90%;
+    }
+    .box2 i, .box3 i, .box6 i{
+        margin-left: 80%;
+    }
+    }
+}
+/* Moblie Query */
+@media(max-width:576px){
+    body{
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: 1fr;
+        /* grid-auto-rows: minmax(150px, auto); */
+        /* position: relative; */
+        grid-template-areas:
+        "box1"
+        "box2"
+        "box3"
+        "box4"
+        "box5"
+        "box6"
+        "box7"
+        "box8"
+        "box9"
+        "box10";
+    }
+    
 }
