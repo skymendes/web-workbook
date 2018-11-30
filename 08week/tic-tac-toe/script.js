@@ -14,15 +14,16 @@ $(document).ready(function() {
     }else{
       play = 'o'
     }
-  
+    clearBoard();
   })
   function checkForWin(){
+
     if
       ($('[data-cell="0"]').text() === play &&
       $('[data-cell="1"]').text() === play &&
       $('[data-cell="2"]').text() === play){
       
-          $('#announce-winner').text(`${play} Wins!`);
+        $('#announce-winner').text(`${play} Wins!`);
     }else if 
       ($('[data-cell="3"]').text() === play &&
       $('[data-cell="4"]').text() === play &&
@@ -66,13 +67,22 @@ $(document).ready(function() {
 
         $('#announce-winner').text(`${play} Wins!`);
       }
-
-// checkForTie();
+      // var count = 0;
+      // for(let i = 0; i < 9; i++){
+      //   if($('[data-cell]').text()){
+      //     count++;
+      //   }
+      // }
+      // if(count === 9){
+      //   $('#announce-winner').text(`Try again`);
+      // }
   }
+function clearBoard(){
+  $(document).ready(function(){
+    $('#clear').click(function(){
+      $('[data-cell]').empty();
+    });
+  });
+}
 
-  // function checkForTie(){
-  //   if ($('[data-cell]').text( !=== ''){
-  //     $('#announce-winner').text(`It's A Tie!`)
-  //     }
-  //   }
 });
