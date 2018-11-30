@@ -67,15 +67,15 @@ $(document).ready(function() {
 
         $('#announce-winner').text(`${play} Wins!`);
       }
-      // var count = 0;
-      // for(let i = 0; i < 9; i++){
-      //   if($('[data-cell]').text()){
-      //     count++;
-      //   }
-      // }
-      // if(count === 9){
-      //   $('#announce-winner').text(`Try again`);
-      // }
+      var count = 0;
+      for(let i = 0; i < 9; i++){
+        if($('[data-cell]').text()){
+          count++;
+        }
+      }
+      if(count === 9){
+        $('#announce-winner').text(`Try again`);
+      }
   }
 function clearBoard(){
   $(document).ready(function(){
