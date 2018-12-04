@@ -5,8 +5,9 @@ $(document).ready(function() {
   // let playertwo = 'o';
   let play = 'x';
   var count = 0;
+  let gamestate = 0;
   $('[data-cell]').on('click', function() {
-    if ($(this).text() === '');
+    if($(this).text() === '' && gamestate === 0){
     $(this).text(play);
     count++;
     checkForWin(count);
@@ -15,8 +16,9 @@ $(document).ready(function() {
     }else{
       play = 'o'
     }
+  }
     clearBoard();
-    // checkForTie();
+  
   })
   function checkForWin(tie){
     if(tie === 9){
@@ -29,69 +31,58 @@ $(document).ready(function() {
       $('[data-cell="2"]').text() === play){
       
         $('#announce-winner').text(`${play} Wins!`);
+        gamestate = 1;
     }else if 
       ($('[data-cell="3"]').text() === play &&
       $('[data-cell="4"]').text() === play &&
       $('[data-cell="5"]').text() === play){
 
         $('#announce-winner').text(`${play} Wins!`);
+        gamestate = 1;
     }else if
       ($('[data-cell="6"]').text() === play &&
       $('[data-cell="7"]').text() === play &&
       $('[data-cell="8"]').text() === play){
 
         $('#announce-winner').text(`${play} Wins!`);
+        gamestate = 1;
     }else if
       ($('[data-cell="0"]').text() === play &&
       $('[data-cell="3"]').text() === play &&
       $('[data-cell="6"]').text() === play){
 
         $('#announce-winner').text(`${play} Wins!`);
+        gamestate = 1;
     }else if
     ($('[data-cell="1"]').text() === play &&
       $('[data-cell="4"]').text() === play &&
       $('[data-cell="7"]').text() === play){
 
         $('#announce-winner').text(`${play} Wins!`);
+        gamestate = 1;
     }else if
       ($('[data-cell="2"]').text() === play &&
       $('[data-cell="5"]').text() === play &&
       $('[data-cell="8"]').text() === play){
 
         $('#announce-winner').text(`${play} Wins!`);
+        gamestate = 1;
     }else if
     ($('[data-cell="0"]').text() === play &&
       $('[data-cell="4"]').text() === play &&
       $('[data-cell="8"]').text() === play){
 
         $('#announce-winner').text(`${play} Wins!`);
+        gamestate = 1;
     }else if
     ($('[data-cell="2"]').text() === play &&
       $('[data-cell="4"]').text() === play &&
       $('[data-cell="6"]').text() === play){
 
         $('#announce-winner').text(`${play} Wins!`);
+        gamestate = 1;
       }
-      if('[data-cell]' !==0){
-        return false;
-      }
-  }
-  // function checkForTie(){
-
-    // var tie = (!checkForWin);
-    // for (var i = 0; i < 9; i++){
-    //   if(!$('[data-cell]').text()){
-    //   $('#announce-winner').text(`try again!`);
-    // }
-  
-    // var count = 0;
-    // for(let i = 0; i < 9; i++){
-    //   if(!$('[data-cell]').text()){
-    //     count++;
-    // if ('[data-cell]' === ''){
-    // $('#announce-winner').text(`try again!`);
-    // }
-  // }
+    }
 
 function clearBoard(){
   $(document).ready(function(){
