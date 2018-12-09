@@ -9,7 +9,6 @@ $(document).ready(function() {
     drop: function( event, ui ){
     let $last = ($(this).children().last()).data('block');
     let $blockVal = $(ui.draggable).data('block');
-    // $(ui.draggable).appendTo(this).attr('style', 'position: "relative"');
     if($blockVal > $last) {
       $(ui.draggable).draggable('option', 'revert', true);
     }else{
@@ -23,8 +22,5 @@ function checkForWin(){
 if($('[data-stack="3"]').children().length === 4){
   $('#announce-game-won').text(`You Won!`)
 }
-// would this work?
-// if($('[data-stack="3"]') === $('[data-block="100"]'), $('[data-block="75"]'), $('[data-block="50"]'), $('[data-block="25"]')){
-//   $('#announce-game-won').text(`You Won!`)
 }
 });
