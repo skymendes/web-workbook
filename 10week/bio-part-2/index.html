@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+    <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+        <h2 style="text-align:center;">Sign up for notifications!</h2>
+        <form action="" name="registration">
+        <label for="firstname">First Name:</label>
+        <input type="text" spellcheck="true" name="firstname" id="firstname" placeholder="John"><br>
+        
+        <label for="lastname">Last Name:</label>
+        <input type="text" spellcheck="true" name="lastname" id="lastname" placeholder="Doe"><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" spellcheck="true" name="email" id="email" placeholder="john@doe.com"><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" spellcheck="true" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;"><br>
+        
+        <label for="checkbox">How often?</label><br>
+        <input type="checkbox" name="often" value="daily"> Daily<br>
+        <input type="checkbox" name="often" value="weekly"> Weekly<br>
+        
+        <label for="radio">Gender</label><br>
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> I'd rather not say<br>
+        
+        <label for="range">How likely are you to visit this page?</label>
+        <input type="range" name="points" min="1" max="5"><br>
+        <button type="submit">Sign Me Up</button><br>
+        <button type="reset">Clear</button><br>
+        
+        <label for="url">Want to send inspirations?</label><br>
+        <input type="url" name="inspo"><br>
+        <input type="submit">
+        </form>
+        <script src="./js/script.js"></script>
+</body>
+</html>
