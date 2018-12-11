@@ -1,30 +1,40 @@
 'use strict'
-//clicking function for moles
-//if mole is orange
-//click changes to black and add point
-//change board value to show mole has been whacked
-
-//check for win
-//check all values
-//if all whacked - announce win
-
-//create timer for mole to switch
 
 $(document).ready(function() {
     var gameboard = ".board"
     var moles = ".mole"
-    var score = ".score"
+    clearBoard();
 //Setting mole to change color when clicked
 //Switching mole back to black after 2s
 $(moles).click(function () {
     var v = $(this).text();
+// console.log($(this).css('backgroundColor'));
     $(this).css("background-color", 'red');
     setTimeout(function(){
         $(moles).css("background-color", 'black');
-    },8000);
-});
+    },//getRandomTimeout()
+    4000);   
 
-if($("#mole1").css("background-color") === "red"){
-    console.log(($("winner").text(`You Win!`)));
+if($("#mole1").css("background-color") === ("rgb(255, 0, 0)") &&
+    $("#mole2").css("background-color") === ("rgb(255, 0, 0)") &&
+    $("#mole3").css("background-color") === ("rgb(255, 0, 0)") &&
+    $("#mole4").css("background-color") === ("rgb(255, 0, 0)") &&
+    $("#mole5").css("background-color") === ("rgb(255, 0, 0)") && 
+    $("#mole6").css("background-color") === ("rgb(255, 0, 0)") &&
+    $("#mole7").css("background-color") === ("rgb(255, 0, 0)") &&
+    $("#mole8").css("background-color") === ("rgb(255, 0, 0)") &&
+    $("#mole9").css("background-color") === ("rgb(255, 0, 0)")){
+$("#winner").text('You Win!');
+}
+});
+// function getRandomTimeout(){
+//     return Math.floor(Math.random()*3500+1000);
+// }
+function clearBoard(){
+    $(document).ready(function(){
+    $('#reset').click(function(){
+        location.reload();
+    });
+    });
 }
 });
