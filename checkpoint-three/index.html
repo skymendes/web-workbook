@@ -3,13 +3,37 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Snake</title>
+    <title>Wack-a-Mole</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 </head>
+<h1>Welcome to Wack-a-Mole!</h1>
 <body>
-    <script src="js/script.js"></script>
+    <div class="score">0</div>
+    <div id="wholeBoard">
+        <div class="board">
+            <div id="mole1" class="mole"></div>
+            <div id="mole2" class="mole"></div>
+            <div id="mole3" class="mole"></div>
+        </div>
+        <div class="board">
+            <div id="mole4" class="mole"></div>
+            <div id="mole5" class="mole"></div>
+            <div id="mole6" class="mole"></div>
+        </div>
+        <div class="board">
+            <div id="mole7" class="mole"></div>
+            <div id="mole8" class="mole"></div>
+            <div id="mole9" class="mole"></div>
+        </div>
+    </div>
+        <button id="reset">reset</button>
+        <div id="winner"></div>
+    <script src="./js/script.js"></script>
+    
 </body>
 </html>
