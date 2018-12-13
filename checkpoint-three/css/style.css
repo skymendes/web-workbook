@@ -36,8 +36,6 @@ button{
 #winner{
     font-family: 'Times New Roman', Times, serif;
     font-size: 60px;
-}
-#winner ::after{
-    transform: scale(1.5) ;
-    transition: all 0.3s ease-in-out 0.2s;
+    color: rgb(51, 50, 50);
+    text-align: center;
 }
